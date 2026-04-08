@@ -1,0 +1,20 @@
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: var(--sidebar);
+  padding: 20px;
+  position: fixed;
+}
+
+.nav-item {
+  color: #9ca3af;
+}
+
+.nav-item.active {
+  background: var(--primary);
+  color: white;
+}
+.nav-item:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+}

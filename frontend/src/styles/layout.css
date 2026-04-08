@@ -1,0 +1,37 @@
+.app-layout {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 240px;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.content {
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+.job-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.main-wrapper {
+  min-height: calc(100vh - 110px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 60px;
+
+  padding: 0;   /* ❌ remove side padding */
+}

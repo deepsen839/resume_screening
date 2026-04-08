@@ -1,0 +1,104 @@
+.upload-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+/* CARD */
+.upload-card {
+  width: 450px;
+  padding: 30px;
+  text-align: center;
+}
+
+/* DROP ZONE */
+.drop-zone {
+  border: 2px dashed #cbd5e1;
+  padding: 30px;
+  border-radius: 12px;
+  background: #f9fafb;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.drop-zone:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+/* BUTTON */
+.upload-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background: #1d4ed8;
+}
+
+/* FILE LIST */
+.file-list {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.file-item {
+  padding: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* HIDE DEFAULT INPUT */
+.hidden-input {
+  display: none;
+}
+
+/* BUTTON */
+.upload-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 20px;
+  background: #2563eb;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+}
+
+.upload-btn:hover {
+  background: #1d4ed8;
+}
+
+/* LOADER CONTAINER */
+.loader {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* SPINNER */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  animation: spin 1s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* DISABLE DROP ZONE */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

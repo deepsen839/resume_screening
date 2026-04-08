@@ -1,0 +1,40 @@
+.label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 10px;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+
+  background: white;
+}
+
+.input:focus {
+  border: 1px solid #2563eb;
+}
+
+textarea.input {
+  height: 120px;
+}
+
+.button {
+  margin-top: 16px;
+  padding: 12px;
+
+  border-radius: 10px;
+  border: none;
+
+  background: #2563eb;
+  color: white;
+
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}

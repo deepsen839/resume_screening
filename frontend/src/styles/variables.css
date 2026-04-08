@@ -1,0 +1,23 @@
+:root {
+  /* Primary (professional blue) */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  /* Backgrounds */
+  --bg: #f5f7fb;          /* light grey (main background) */
+  --sidebar: #0f172a;     /* dark but not black */
+  --card: #ffffff;
+
+  /* Borders */
+  --border: #e2e8f0;
+
+  /* Text */
+  --text: #0f172a;
+  --text-muted: #64748b;
+
+  /* Status */
+  --success: #16a34a;
+  --danger: #dc2626;
+
+  --radius: 10px;
+}

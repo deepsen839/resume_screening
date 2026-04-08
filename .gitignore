@@ -1,0 +1,89 @@
+# ==============================
+# Node / Frontend (Vite + React)
+# ==============================
+node_modules/
+dist/
+build/
+.vite/
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==============================
+# Python / Backend (FastAPI)
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# ==============================
+# Database
+# ==============================
+*.db
+*.sqlite3
+
+# ==============================
+# Uploads (VERY IMPORTANT for your project)
+# ==============================
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ==============================
+# Logs
+# ==============================
+logs/
+*.log
+
+# ==============================
+# OS Files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# IDE / Editor
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==============================
+# Docker
+# ==============================
+docker-compose.override.yml
+*.tar
+
+# ==============================
+# Build / Cache
+# ==============================
+.cache/
+*.cache
+
+# ==============================
+# Coverage
+# ==============================
+coverage/
+htmlcov/
+
+# ==============================
+# Misc
+# ==============================
+*.bak
+*.tmp
+*.temp
