@@ -7,9 +7,9 @@ export default function Header() {
       <h2>AI Recruiter</h2>
 
       <div className="nav">
-        <NavLink to="/" className="nav-link">Upload</NavLink>
+        {/* <NavLink to="/" className="nav-link">Upload</NavLink> */}
         <NavLink to="/jobs" className="nav-link">Jobs</NavLink>
-        <NavLink to="/results" className="nav-link">Results</NavLink>
+        {/* <NavLink to="/results" className="nav-link">Results</NavLink> */}
       </div>
     </div>
   );

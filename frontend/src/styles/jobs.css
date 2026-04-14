@@ -1,63 +1,78 @@
 .jobs-page {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-/* FORM */
-.job-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  padding: 30px 16px;
+  background: #f5f7fb;
+  min-height: 100vh;
 }
 
-/* INPUTS */
-.input,
-.textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
+.section-title {
+  margin: 30px 0 15px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.textarea {
-  min-height: 120px;
+/* TABLE */
+.table-container {
+  width: 100%;
+  max-width: 900px;
+  overflow-x: auto;
 }
 
-/* BUTTON */
-.button {
-  padding: 12px;
-  background: #2563eb;
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.job-table th,
+.job-table td {
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.job-table th {
+  background: #3b82f6;
   color: white;
+  font-weight: 600;
+}
+
+.job-table tr {
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.job-table tr:hover {
+  background: #f5f9ff;
+}
+
+.job-table td {
+  font-size: 14px;
+  color: #444;
+}
+
+/* PAGINATION */
+.pagination {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination button {
+  padding: 8px 14px;
   border: none;
   border-radius: 8px;
+  background: #3b82f6;
+  color: white;
   cursor: pointer;
 }
 
-.button:hover {
-  background: #1d4ed8;
-}
-
-/* JOB LIST */
-.section-title {
-  margin-top: 30px;
-}
-
-.job-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.job-card {
-  padding: 15px;
-  border-radius: 10px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.job-card:hover {
-  background: #eef2ff;
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }

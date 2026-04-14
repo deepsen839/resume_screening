@@ -39,3 +39,23 @@ def get_jobs():
 
     db.close()
     return result
+
+@router.get("/{id}")
+def get_job(id: int):
+    db = SessionLocal()
+    print(id)
+    job = db.query(Job).filter(Job.id == id).first()
+
+    if not job:
+        db.close()
+        return {"error": "Job not found"}
+
+    result = {
+        "id": job.id,
+        "title": job.title,
+        "description": job.description
+    }
+
+    db.close()
+    print(result)
+    return result

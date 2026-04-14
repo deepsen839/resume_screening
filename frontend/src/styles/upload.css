@@ -1,44 +1,55 @@
+/* PAGE */
 .upload-page {
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* JOB INFO */
+.job-info {
+  margin-bottom: 20px;
 }
 
 /* CARD */
 .upload-card {
-  width: 450px;
   padding: 30px;
   text-align: center;
 }
 
 /* DROP ZONE */
 .drop-zone {
-  border: 2px dashed #cbd5e1;
-  padding: 30px;
+  border: 2px dashed #3b82f6;
+  padding: 35px;
   border-radius: 12px;
-  background: #f9fafb;
+  background: #f9fbff;
   margin-top: 20px;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
 .drop-zone:hover {
   background: #eef2ff;
-  border-color: #6366f1;
+  border-color: #2563eb;
 }
 
 /* BUTTON */
 .upload-btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 16px;
-  background: #2563eb;
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: #3b82f6;
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .upload-btn:hover {
-  background: #1d4ed8;
+  background: #2563eb;
+}
+
+/* HIDE INPUT */
+.hidden-input {
+  display: none;
 }
 
 /* FILE LIST */
@@ -48,57 +59,35 @@
 }
 
 .file-item {
-  padding: 8px;
+  padding: 10px;
   border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
 }
 
-/* HIDE DEFAULT INPUT */
-.hidden-input {
-  display: none;
-}
-
-/* BUTTON */
-.upload-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 14px 20px;
-  background: #2563eb;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 500;
-  text-align: center;
-}
-
-.upload-btn:hover {
-  background: #1d4ed8;
-}
-
-/* LOADER CONTAINER */
+/* LOADER */
 .loader {
-  margin-bottom: 20px;
+  margin: 15px 0;
   text-align: center;
 }
 
-/* SPINNER */
 .spinner {
   width: 40px;
   height: 40px;
   border: 4px solid #e5e7eb;
-  border-top: 4px solid #2563eb;
+  border-top: 4px solid #3b82f6;
   border-radius: 50%;
-  margin: 0 auto 10px;
+  margin: auto;
   animation: spin 1s linear infinite;
 }
 
-/* ANIMATION */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* DISABLE DROP ZONE */
+/* DISABLED STATE */
 .disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   pointer-events: none;
 }
