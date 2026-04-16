@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { uploadResume, getJob } from "../api";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 
 import "../styles/upload.css";
 import "../styles/card.css";
 
 function Upload() {
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const [files, setFiles] = useState([]);
   const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -52,14 +52,46 @@ function Upload() {
     }
   };
 
-  const handleDrop = (e) => {
-    e.preventDefault();
-    handleFiles(e.dataTransfer.files);
-  };
+const handleDrop = async (e) => {
+  e.preventDefault();
+
+  const items = e.dataTransfer.items;
+  let allFiles = [];
+
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i].webkitGetAsEntry();
+    if (item) {
+      const files = await readEntry(item);
+      allFiles = allFiles.concat(files);
+    }
+  }
+
+  handleFiles(allFiles);
+};
 
   const handleChange = (e) => {
     handleFiles(e.target.files);
   };
+  const readEntry = (entry) => {
+  return new Promise((resolve) => {
+    if (entry.isFile) {
+      entry.file((file) => resolve([file]));
+    } 
+    else if (entry.isDirectory) {
+      const dirReader = entry.createReader();
+      dirReader.readEntries(async (entries) => {
+        let files = [];
+
+        for (let ent of entries) {
+          const res = await readEntry(ent);
+          files = files.concat(res);
+        }
+
+        resolve(files);
+      });
+    }
+  });
+};
 
   return (
     <div className="upload-page">
@@ -91,12 +123,13 @@ function Upload() {
 
           <label className="upload-btn">
             Browse Files
-            <input
-              type="file"
-              multiple
-              onChange={handleChange}
-              className="hidden-input"
-            />
+           <input
+                type="file"
+                multiple
+                webkitdirectory="true"
+                onChange={handleChange}
+                className="hidden-input"
+              />
           </label>
         </div>
 
@@ -105,14 +138,25 @@ function Upload() {
 
         {/* FILE LIST */}
         {files.length > 0 && (
-          <div className="file-list">
-            {files.map((file, i) => (
-              <div key={i} className="file-item">
-                📄 {file.name}
-              </div>
-            ))}
-          </div>
-        )}
+  <>
+    <div className="file-list">
+      {files.map((file, i) => (
+        <div key={i} className="file-item">
+          📄 {file.name}
+        </div>
+      ))}
+    </div>
+
+    {/* ✅ VIEW RESULT BUTTON */}
+    <button
+      className="view-btn"
+      onClick={() => navigate(`/results/${id}`)}
+      disabled={loading}
+    >
+      View Candidates
+    </button>
+  </>
+)}
 
       </div>
 

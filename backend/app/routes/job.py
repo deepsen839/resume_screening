@@ -40,11 +40,11 @@ def get_jobs():
     db.close()
     return result
 
-@router.get("/{id}")
-def get_job(id: int):
+@router.get("/{job_id}")
+def get_job(job_id: int):
     db = SessionLocal()
     print(id)
-    job = db.query(Job).filter(Job.id == id).first()
+    job = db.query(Job).filter(Job.id == job_id).first()
 
     if not job:
         db.close()

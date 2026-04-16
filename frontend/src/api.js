@@ -27,4 +27,4 @@ export const rankCandidates = (jobId) => {
   return axios.get(`${API}/ranking/${jobId}`);
 };
 
-export const getJob = (id) => {return axios.get(`${API}/job/${id}`);};
+export const getJob = (jobId) => {return axios.get(`${API}/job/${jobId}`);};

@@ -91,3 +91,19 @@
   opacity: 0.6;
   pointer-events: none;
 }
+.view-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: #059669;
+}
